@@ -1,0 +1,18 @@
+{
+  "name": "proto-domaine-shopify-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "check": "shopify theme check --path=theme",
+    "dev": "shopify theme dev --path=theme --store=proto-domaine.myshopify.com",
+    "info": "shopify theme info --store=proto-domaine.myshopify.com",
+    "dev:old": "env-cmd -r shopify.presets.json -e development shopify theme dev",
+    "download": "env-cmd -r shopify.presets.json -e development shopify theme pull",
+    "download:prod": "env-cmd -r shopify.presets.json -e production shopify theme pull",
+    "deploy": "env-cmd -r shopify.presets.json -e development shopify theme push",
+    "deploy:prod": "env-cmd -r shopify.presets.json -e production shopify theme push"
+  },
+  "dependencies": {
+    "@shopify/cli": "3.63.2",
+    "env-cmd": "^10.1.0"
+  }
+}
